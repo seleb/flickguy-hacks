@@ -1,0 +1,13 @@
+{
+	"external": [
+		"flickguy"
+	],
+	"output": {
+		"format": "iife",
+		"globals": {
+			"flickguy": "flickguy"
+		},
+		"indent": false,
+		"extend": true
+	}
+}
