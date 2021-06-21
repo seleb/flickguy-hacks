@@ -1,0 +1,21 @@
+{
+	"private": true,
+	"name": "flickguy-hacks",
+	"description": "re-usable scripts for flickguy",
+	"keywords": [
+		"flickguy",
+		"hacks"
+	],
+	"version": "1.0.0",
+	"scripts": {
+	},
+	"author": "Sean S. LeBlanc <sean.s.leblanc@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/seleb/flickguy-hacks.git"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+	}
+}
