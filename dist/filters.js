@@ -3,7 +3,7 @@
 @file filters
 @summary adds post-processing filters to flickguys
 @license MIT
-@version 1.0.1
+@version 1.0.2
 @author Sean S. LeBlanc
 
 @description
@@ -530,6 +530,7 @@ before('Editor.prototype.init', function () {
 	container.appendChild(glazy.canvasContainer);
 	glazy.canvasContainer.parentElement.removeChild(glazy.canvasContainer);
 	glazy.canvas.style.width = '512px';
+	glazy.canvas.style.maxWidth = '100%';
 	glazy.canvas.style.height = 'auto';
 	glazy.canvas.style.position = 'absolute';
 	glazy.canvas.style.pointerEvents = 'none';

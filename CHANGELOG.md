@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/seleb/flickguy-hacks/compare/v1.0.1...v1.0.2) (2021-06-22)
+
+
+### Bug Fixes
+
+* make filtered canvas responsive ([109522d](https://github.com/seleb/flickguy-hacks/commit/109522d3fd9d2aa7ccb9b15559e534588cad903d))
+
 ## [1.0.1](https://github.com/seleb/flickguy-hacks/compare/v1.0.0...v1.0.1) (2021-06-22)
 
 
