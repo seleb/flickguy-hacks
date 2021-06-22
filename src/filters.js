@@ -17,6 +17,7 @@ HOW TO USE:
 1. Copy-paste this script into a script tag in your flickguy
 2. (optional) edit `hackOptions` below with custom filters
 */
+import flickguy from 'flickguy';
 import WebGLazy from 'webglazy';
 import { after, before } from './helpers/kitsy-script-toolkit';
 import { addRadioGroup } from './helpers/utils';
@@ -289,12 +290,15 @@ before('Editor.prototype.init', function () {
 	glazy.canvas.style.pointerEvents = 'none';
 });
 before('Editor.prototype.exportImage', function () {
+	flickguy.exportScaleOriginal = flickguy.exportScale;
+	flickguy.exportScale = Math.ceil(flickguy.exportScaleOriginal / glazy.scaleMultiplier);
 	this.renderingOriginal = this.rendering;
 	glazy.render();
 	this.rendering = { canvas: document.getElementById('outputCanvas') };
 });
 after('Editor.prototype.exportImage', function () {
 	this.rendering = this.renderingOriginal;
+	flickguy.exportScale = flickguy.exportScaleOriginal;
 });
 
 addRadioGroup(
