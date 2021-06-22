@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/seleb/flickguy-hacks/compare/v1.1.0...v1.1.1) (2021-06-22)
+
+
+### Bug Fixes
+
+* use `data-editor-only` instead of manually hacking pressure out of export ([a729822](https://github.com/seleb/flickguy-hacks/commit/a72982200929eb90edfb71565f5a7cefc5eb3be7))
+
 # [1.1.0](https://github.com/seleb/flickguy-hacks/compare/v1.0.3...v1.1.0) (2021-06-22)
 
 

@@ -3,7 +3,7 @@
 @file pressure
 @summary adds pressure sensitivity to paint tool
 @license MIT
-@version 1.1.0
+@version 1.1.1
 @author Sean S. LeBlanc
 
 @description
@@ -227,6 +227,7 @@ before('Editor.prototype.init', function () {
 		optionLabel.style.color = '#000';
 		optionLabel.style.fontWeight = 'bold';
 		optionLabel.title = 'pressure sensitivity';
+		optionLabel.dataset.editorOnly = true;
 		const optionInput = document.createElement('input');
 		optionInput.type = 'checkbox';
 		optionInput.id = id;
@@ -296,19 +297,6 @@ before('Editor.prototype.init', function () {
 			polyfill: false,
 		},
 	);
-});
-
-// prevent remixed editors from breaking due to injected "brush" option
-before('Editor.prototype.exportProject', function () {
-	const parent = pressureInput.parentElement.parentElement;
-	pressureInput.parentElement.remove();
-	const c = document.documentElement.cloneNode;
-	document.documentElement.cloneNode = (deep) => {
-		document.documentElement.cloneNode = c;
-		const result = document.documentElement.cloneNode(deep);
-		parent.appendChild(pressureInput.parentElement);
-		return result;
-	};
 });
 
 exports.hackOptions = hackOptions;
