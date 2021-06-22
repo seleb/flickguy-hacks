@@ -17,6 +17,7 @@ export function addRadioGroup(hackOptions, title, id, options, onChange) {
 			radioGroup.id = id;
 			radioGroup.title = title;
 			radioGroup.style.flex = 'auto';
+			radioGroup.style.overflowX = 'auto';
 
 			options.forEach((option) => {
 				const optionLabel = document.createElement('label');
@@ -34,6 +35,7 @@ export function addRadioGroup(hackOptions, title, id, options, onChange) {
 				const optionName = document.createElement('span');
 				optionName.textContent = option.label;
 				optionName.style.position = 'relative';
+				optionName.style.padding = '0.25em';
 				optionLabel.appendChild(optionName);
 				radioGroup.appendChild(optionLabel);
 			});
