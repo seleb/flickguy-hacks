@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/seleb/flickguy-hacks/compare/v1.0.0...v1.0.1) (2021-06-22)
+
+
+### Bug Fixes
+
+* filters upscaling due to flickguy export scale and webglazy scale multiplier ([fb565a5](https://github.com/seleb/flickguy-hacks/commit/fb565a5c1f8348640a55282a915ba02f5150efb3))
+
 # 1.0.0 (2021-06-21)
 
 

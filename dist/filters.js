@@ -3,7 +3,7 @@
 @file filters
 @summary adds post-processing filters to flickguys
 @license MIT
-@version 1.0.0
+@version 1.0.1
 @author Sean S. LeBlanc
 
 @description
@@ -535,12 +535,15 @@ before('Editor.prototype.init', function () {
 	glazy.canvas.style.pointerEvents = 'none';
 });
 before('Editor.prototype.exportImage', function () {
+	flickguy__default['default'].exportScaleOriginal = flickguy__default['default'].exportScale;
+	flickguy__default['default'].exportScale = Math.ceil(flickguy__default['default'].exportScaleOriginal / glazy.scaleMultiplier);
 	this.renderingOriginal = this.rendering;
 	glazy.render();
 	this.rendering = { canvas: document.getElementById('outputCanvas') };
 });
 after('Editor.prototype.exportImage', function () {
 	this.rendering = this.renderingOriginal;
+	flickguy__default['default'].exportScale = flickguy__default['default'].exportScaleOriginal;
 });
 
 addRadioGroup(
