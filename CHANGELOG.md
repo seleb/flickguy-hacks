@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/seleb/flickguy-hacks/compare/v1.0.3...v1.1.0) (2021-06-22)
+
+
+### Features
+
+* add pressure hack ([44418a9](https://github.com/seleb/flickguy-hacks/commit/44418a9ad8218023de1d85791f7103eb5a7fc661))
+
 ## [1.0.3](https://github.com/seleb/flickguy-hacks/compare/v1.0.2...v1.0.3) (2021-06-22)
 
 

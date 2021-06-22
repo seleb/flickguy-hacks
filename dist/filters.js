@@ -3,7 +3,7 @@
 @file filters
 @summary adds post-processing filters to flickguys
 @license MIT
-@version 1.0.3
+@version 1.1.0
 @author Sean S. LeBlanc
 
 @description

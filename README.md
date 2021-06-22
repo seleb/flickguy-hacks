@@ -8,6 +8,7 @@ A collection of re-usable scripts for [candle](https://twitter.com/ragzouken)'s 
 ## Contents
 
 - 📸 [filters](/dist/filters.js): adds post-processing filters to flickguys
+- 🖌 [pressure](/dist/pressure.js): adds pressure sensitivity to paint tool
 
 ## How to use
 
