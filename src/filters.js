@@ -285,6 +285,7 @@ before('Editor.prototype.init', function () {
 	container.appendChild(glazy.canvasContainer);
 	glazy.canvasContainer.parentElement.removeChild(glazy.canvasContainer);
 	glazy.canvas.style.width = '512px';
+	glazy.canvas.style.maxWidth = '100%';
 	glazy.canvas.style.height = 'auto';
 	glazy.canvas.style.position = 'absolute';
 	glazy.canvas.style.pointerEvents = 'none';
