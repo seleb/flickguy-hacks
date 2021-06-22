@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/seleb/flickguy-hacks/compare/v1.0.2...v1.0.3) (2021-06-22)
+
+
+### Bug Fixes
+
+* make radio options scroll instead of overflowing ([fec8499](https://github.com/seleb/flickguy-hacks/commit/fec849956983f3d9edbba765e4af287648ce5239))
+
 ## [1.0.2](https://github.com/seleb/flickguy-hacks/compare/v1.0.1...v1.0.2) (2021-06-22)
 
 

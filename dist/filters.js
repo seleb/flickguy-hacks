@@ -3,7 +3,7 @@
 @file filters
 @summary adds post-processing filters to flickguys
 @license MIT
-@version 1.0.2
+@version 1.0.3
 @author Sean S. LeBlanc
 
 @description
@@ -445,6 +445,7 @@ function addRadioGroup(hackOptions, title, id, options, onChange) {
 			radioGroup.id = id;
 			radioGroup.title = title;
 			radioGroup.style.flex = 'auto';
+			radioGroup.style.overflowX = 'auto';
 
 			options.forEach((option) => {
 				const optionLabel = document.createElement('label');
@@ -462,6 +463,7 @@ function addRadioGroup(hackOptions, title, id, options, onChange) {
 				const optionName = document.createElement('span');
 				optionName.textContent = option.label;
 				optionName.style.position = 'relative';
+				optionName.style.padding = '0.25em';
 				optionLabel.appendChild(optionName);
 				radioGroup.appendChild(optionLabel);
 			});
