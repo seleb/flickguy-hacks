@@ -3,7 +3,7 @@
 @file pressure
 @summary adds pressure sensitivity to paint tool
 @license MIT
-@version 1.2.1
+@version 1.2.2
 @author Sean S. LeBlanc
 
 @description

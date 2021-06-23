@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/seleb/flickguy-hacks/compare/v1.2.1...v1.2.2) (2021-06-23)
+
+
+### Bug Fixes
+
+* demo using previous hack versions ([295667b](https://github.com/seleb/flickguy-hacks/commit/295667b7657e68fbf4eb6f531056f0cd4c877528))
+
 ## [1.2.1](https://github.com/seleb/flickguy-hacks/compare/v1.2.0...v1.2.1) (2021-06-23)
 
 
