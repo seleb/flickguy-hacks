@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/seleb/flickguy-hacks/compare/v1.1.2...v1.2.0) (2021-06-23)
+
+
+### Features
+
+* add demo ([4fc03ec](https://github.com/seleb/flickguy-hacks/commit/4fc03ec4559c5476cbc0868ff0a7621316f1532e))
+
 ## [1.1.2](https://github.com/seleb/flickguy-hacks/compare/v1.1.1...v1.1.2) (2021-06-23)
 
 

@@ -7,7 +7,7 @@
 		"hacks"
 	],
 	"main": "index.mjs",
-	"version": "1.1.2",
+	"version": "1.2.0",
 	"scripts": {
 		"build": "rollup -c",
 		"test": "jest --runInBand",

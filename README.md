@@ -2,6 +2,8 @@
 
 A collection of re-usable scripts for [candle](https://twitter.com/ragzouken)'s [flickguy](https://kool.tools/flickguy).
 
+[demo](https://seleb.github.io/flickguy-hacks/)
+
 - [Contents](#contents)
 - [How to use](#how-to-use)
 
