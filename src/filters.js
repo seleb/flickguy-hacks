@@ -267,17 +267,9 @@ const glazy = new WebGLazy({
 	fragment: initialFilter.shader,
 	autoInit: false,
 });
-const onChangeFilter = (idx) => {
-	const filter = hackOptions.filters[idx];
-	glazy.scaleMultiplier = filter.scale || 1;
-	glazy.canvas.width = glazy.size.x = 128 * glazy.scaleMultiplier;
-	glazy.canvas.height = glazy.size.y = 128 * glazy.scaleMultiplier;
-	glazy.setShader(undefined, filter.shader);
-	glazy.gl.viewport(0, 0, glazy.size.x, glazy.size.y);
-	glazy.onResize();
-};
 before('Editor.prototype.init', function () {
 	glazy.init();
+	glazy.canvas.dataset.editorOnly = true;
 	document.querySelector('style:last-of-type').remove();
 
 	const container = renderer.parentElement;
@@ -289,6 +281,26 @@ before('Editor.prototype.init', function () {
 	glazy.canvas.style.height = 'auto';
 	glazy.canvas.style.position = 'absolute';
 	glazy.canvas.style.pointerEvents = 'none';
+
+	addRadioGroup(
+		hackOptions,
+		'filters',
+		'shader-select',
+		hackOptions.filters.map((i, idx) => ({
+			label: i.name,
+			title: 'filter: ' + i.name,
+			value: idx,
+		})),
+		function (idx) {
+			const filter = hackOptions.filters[idx];
+			glazy.scaleMultiplier = filter.scale || 1;
+			glazy.canvas.width = glazy.size.x = 128 * glazy.scaleMultiplier;
+			glazy.canvas.height = glazy.size.y = 128 * glazy.scaleMultiplier;
+			glazy.setShader(undefined, filter.shader);
+			glazy.gl.viewport(0, 0, glazy.size.x, glazy.size.y);
+			glazy.onResize();
+		},
+	);
 });
 before('Editor.prototype.exportImage', function () {
 	flickguy.exportScaleOriginal = flickguy.exportScale;
@@ -301,15 +313,3 @@ after('Editor.prototype.exportImage', function () {
 	this.rendering = this.renderingOriginal;
 	flickguy.exportScale = flickguy.exportScaleOriginal;
 });
-
-addRadioGroup(
-	hackOptions,
-	'filters',
-	'shader-select',
-	hackOptions.filters.map((i, idx) => ({
-		label: i.name,
-		title: 'filter: ' + i.name,
-		value: idx,
-	})),
-	onChangeFilter,
-);
