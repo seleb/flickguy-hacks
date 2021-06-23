@@ -1,3 +1,11 @@
+## [1.1.2](https://github.com/seleb/flickguy-hacks/compare/v1.1.1...v1.1.2) (2021-06-23)
+
+
+### Bug Fixes
+
+* make better use of `data-editor-only` to simplify DOM manipulation ([a602a18](https://github.com/seleb/flickguy-hacks/commit/a602a1870aecf1330a404b28f40f30000f8538dd))
+* tools element id ([0798714](https://github.com/seleb/flickguy-hacks/commit/0798714963b420420ef982a97fd9c71fda01b955))
+
 ## [1.1.1](https://github.com/seleb/flickguy-hacks/compare/v1.1.0...v1.1.1) (2021-06-22)
 
 

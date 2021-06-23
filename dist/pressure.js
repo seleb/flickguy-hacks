@@ -3,7 +3,7 @@
 @file pressure
 @summary adds pressure sensitivity to paint tool
 @license MIT
-@version 1.1.1
+@version 1.1.2
 @author Sean S. LeBlanc
 
 @description
@@ -216,44 +216,40 @@ kitsy.after;
 
 
 
-const id = 'pressure';
-let pressureInput;
 before('Editor.prototype.init', function () {
-	if (!document.getElementById(id)) {
-		const optionLabel = document.createElement('label');
-		optionLabel.style.display = 'flex';
-		optionLabel.style.alignItems = 'center';
-		optionLabel.style.justifyContent = 'center';
-		optionLabel.style.color = '#000';
-		optionLabel.style.fontWeight = 'bold';
-		optionLabel.title = 'pressure sensitivity';
-		optionLabel.dataset.editorOnly = true;
-		const optionInput = document.createElement('input');
-		optionInput.type = 'checkbox';
-		optionInput.id = id;
-		optionInput.name = id;
-		optionInput.value = 'pressure';
-		optionInput.style.appearance = 'none';
-		optionInput.style.mozAppearance = 'none';
-		optionInput.style.webkitAppearance = 'none';
-		optionInput.style.margin = '0';
-		optionInput.style.borderRadius = 'inherit';
-		optionInput.style.position = 'absolute';
-		optionInput.style.width = '100%';
-		optionInput.style.height = '100%';
-		optionLabel.appendChild(optionInput);
-		const optionIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-		optionIcon.setAttributeNS(null, 'width', 16);
-		optionIcon.setAttributeNS(null, 'height', 16);
-		optionIcon.setAttributeNS(null, 'fill', 'currentColor');
-		optionIcon.setAttributeNS(null, 'viewBox', '0 0 16 16');
-		optionIcon.innerHTML = '<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/><path d="M9 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>';
-		optionLabel.appendChild(optionIcon);
+	const optionLabel = document.createElement('label');
+	optionLabel.style.display = 'flex';
+	optionLabel.style.alignItems = 'center';
+	optionLabel.style.justifyContent = 'center';
+	optionLabel.style.color = '#000';
+	optionLabel.style.fontWeight = 'bold';
+	optionLabel.title = 'pressure sensitivity';
+	optionLabel.dataset.editorOnly = true;
+	const optionInput = document.createElement('input');
+	optionInput.type = 'checkbox';
+	optionInput.id = 'pressure';
+	optionInput.name = 'pressure';
+	optionInput.value = 'pressure';
+	optionInput.style.appearance = 'none';
+	optionInput.style.mozAppearance = 'none';
+	optionInput.style.webkitAppearance = 'none';
+	optionInput.style.margin = '0';
+	optionInput.style.borderRadius = 'inherit';
+	optionInput.style.position = 'absolute';
+	optionInput.style.width = '100%';
+	optionInput.style.height = '100%';
+	optionLabel.appendChild(optionInput);
+	const optionIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+	optionIcon.setAttributeNS(null, 'width', 16);
+	optionIcon.setAttributeNS(null, 'height', 16);
+	optionIcon.setAttributeNS(null, 'fill', 'currentColor');
+	optionIcon.setAttributeNS(null, 'viewBox', '0 0 16 16');
+	optionIcon.innerHTML = '<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/><path d="M9 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>';
+	optionLabel.appendChild(optionIcon);
 
-		document.getElementById('brush-select').appendChild(optionLabel);
-	}
+	document.getElementById('brush-select').appendChild(optionLabel);
 
-	pressureInput = document.getElementById(id);
+	const pressureInput = optionInput;
 	pressureInput.onchange = () => {
 		if (pressureInput.checked) {
 			pressureInput.style.background = 'blue';
