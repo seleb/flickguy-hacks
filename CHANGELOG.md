@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/seleb/flickguy-hacks/compare/v1.2.0...v1.2.1) (2021-06-23)
+
+
+### Bug Fixes
+
+* artifacts around transparent edges in upscale filter ([3478228](https://github.com/seleb/flickguy-hacks/commit/3478228c3b03c90ebb5b570cb28c0ab6f60c070a))
+
 # [1.2.0](https://github.com/seleb/flickguy-hacks/compare/v1.1.2...v1.2.0) (2021-06-23)
 
 
