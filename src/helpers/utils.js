@@ -49,7 +49,7 @@ export function addRadioGroup(hackOptions, title, id, options, onChange) {
 	};
 	container.appendChild(about);
 
-	document.getElementById('layer-options').insertAdjacentElement('afterend', container);
+	document.getElementById('tools').insertAdjacentElement('afterend', container);
 
 	// init styles
 	document.querySelectorAll(`#${id} span`).forEach((span) => {
